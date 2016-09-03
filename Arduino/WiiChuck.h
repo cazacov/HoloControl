@@ -73,6 +73,13 @@ public:
     // for using the joystick like a directional button
     boolean leftJoy(int thresh=60);
 
+    // for using the joystick like a directional button
+    boolean upJoy(int thresh=60);
+
+    // for using the joystick like a directional button
+    boolean downJoy(int thresh=60);
+
+
     int readJoyX();
 
     int readJoyY();

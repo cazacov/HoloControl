@@ -5,7 +5,7 @@ WiiChuck chuck = WiiChuck();
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(19200);
   chuck.begin();
   chuck.update();
 }
@@ -21,10 +21,16 @@ void loop() {
   if (chuck.leftJoy()) {
     Serial.print("a");
   }
+  if (chuck.upJoy()) {
+    Serial.print("w");
+  }
+  if (chuck.downJoy()) {
+    Serial.print("s");
+  }
   if (chuck.zPressed()) {
-    Serial.println();
+    Serial.print("\0x0A");  // Enter
   }
   if (chuck.cPressed()) {
-    Serial.print("--ESC--");
+    Serial.print("\0x1B");  //ESC
   }
 }

@@ -113,6 +113,15 @@ boolean WiiChuck::leftJoy(int thresh) {
     return (readJoyX() < -thresh and lastJoyX >= -thresh);
 }
 
+// for using the joystick like a directional button
+boolean WiiChuck::upJoy(int thresh) {
+    return (readJoyY() > thresh and lastJoyY <= thresh);
+}
+
+// for using the joystick like a directional button
+boolean WiiChuck::downJoy(int thresh) {
+    return (readJoyY() < -thresh and lastJoyY >= -thresh);
+}
 
 int WiiChuck::readJoyX() {
     return (int) joyX - zeroJoyX;
