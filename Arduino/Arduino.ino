@@ -23,7 +23,7 @@
 #include <SoftwareSerial.h>
 
 WiiChuck chuck = WiiChuck();
-SoftwareSerial bt(3, 13); // RX, TX
+SoftwareSerial bt(3, 11); // RX, TX
 
 // Arduino IDE settings:
 // Tools->Board: "Arduino Pro or Pro Mini"
