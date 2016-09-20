@@ -17,7 +17,8 @@ HoloLens input device based on Wii Nunchuk controller.
 - For Unity scripts the HoloControler looks like normal key press events comming from a keyboard.
 
 
-First prototype:
+First prototype
+
 [<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/Prototype.png" alt="Prototype" width="480" height="320"/>](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/Prototype.png "Prototype")
 
 
@@ -26,10 +27,10 @@ First prototype:
 
 ### Parts list
 | Part | Price in EU | Comment |
-|-|-|-|
-| Wii Nunchuk | 10 €| Ebay |
-| Arduino Mini 3.3V/8MHz | 9.50 €| Reads data from the Nunchuk |
-| Bluefruit EZ-Key | 21 €| Bluetooth HID Keyboard Controller |
+| --- | --- | --- |
+| Wii Nunchuk | 10 € | Got one in perfect condition on Ebay |
+| Arduino Mini 3.3V/8MHz | 9.50 € | Reads data from the Nunchuk |
+| Bluefruit EZ-Key | 21 € | Bluetooth HID Keyboard Controller |
 
 You will also need FTDI cable to program Arduino Mini. It's also possible to [use regular Arduino as programmer](https://www.arduino.cc/en/Guide/ArduinoMini).
 
@@ -37,7 +38,7 @@ You will also need FTDI cable to program Arduino Mini. It's also possible to [us
 
 Wired version
 
-[<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/circuit.png" alt="Circuit diagram" width="460" height="200"/>](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/circuit.png "Circuit diagram")
+[<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/circuit.png" alt="Circuit diagram" />](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/circuit.png "Circuit diagram")
 
 
 Arduino stacked on the top of EZ-Key board. I put a piece of plastic between boards for electrical isolation.
@@ -60,15 +61,16 @@ Arduino sources are in the "Arduino" folder.
 
 The easiest way to program Arduino Mini is using FTDI cable. It's also possible to use USB<->Serial adapter or Arduino UNO as programming device.
 
-Be sure to choose correct board type in the Arduino IDE:
-[<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/Arduino_IDE_settings.png" alt="Arduino IDE settings" width="695" height="320"/>](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/Arduino_IDE_settings.png "Arduino IDE settings")
+Be sure to choose correct board type in the Arduino IDE
 
-Jostick directions are translated in A, D, W, S keys. Z button is mapped to Return and C button to Escape.
+[<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/Arduino_IDE_settings.png" alt="Arduino IDE settings" width="695" height="320"/>](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/Arduino_IDE_settings.png "Arduino IDE settings")
 
 
 ## Using in Unity
 
-That's pretty simple. The controller simulates keys strokes on a Bluetooth keybord. You can get key state with the standard UnityEngine.Input class:
+The controller simulates keys strokes on a Bluetooth keybord. Jostick directions are translated in A, D, W, S keys. Z button is mapped to Return and C button to Escape. 
+
+You can get key state with the standard UnityEngine.Input class:
 
 ```csharp
 if (UnityEngine.Input.GetKey(KeyCode.A))
@@ -77,7 +79,7 @@ if (UnityEngine.Input.GetKey(KeyCode.A))
 	...
 }
 
-if (Input.GetKey(KeyCode.D))
+if (UnityEngine.Input.GetKey(KeyCode.D))
 {
 	// Joystick right
 	...
