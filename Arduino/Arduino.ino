@@ -16,7 +16,7 @@
 // EZ-Key connection
 // Grounds -> GND
 // 3V -> VCC
-// RX -> 13 (digital)
+// RX -> 11 (digital)
 
 #include <Wire.h>
 #include "WiiChuck.h"
