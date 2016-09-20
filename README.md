@@ -10,9 +10,9 @@ HoloLens input device based on Wii Nunchuk controller.
 
 ![Hardware overview](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/overview.png)
 
-- Arduino board reads button state from nunchuck over I2C protocol.
+- Arduino board reads button state from nunchuk over I2C protocol.
 - Arduno translates key press events in HID codes and sends them to EZ-Key board over serial interface.
-- Bluefruit EZ-Key board appears like a HID device (external keyboard) in the list of available Bluetooth devices on the HoloLens.
+- Bluefruit EZ-Key board appears like an external keyboard in the list of available Bluetooth devices on the HoloLens.
 - Standard Bluetooth pairing, no PIN required. If something goes wrong there is Pair button on the EZ-Key board to restart the connection.
 - For Unity scripts the HoloControler looks like normal key press events comming from a keyboard.
 
