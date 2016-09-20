@@ -63,6 +63,28 @@ The easiest way to program Arduino Mini is using FTDI cable. It's also possible 
 Be sure to choose correct board type in the Arduino IDE:
 [<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/Arduino_IDE_settings.png" alt="Arduino IDE settings" width="695" height="320"/>](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/Arduino_IDE_settings.png "Arduino IDE settings")
 
+Jostick directions are translated in A, D, W, S keys. Z button is mapped to Return and C button to Escape.
+
+
+## Using in Unity
+
+That's pretty simple. The controller simulates keys strokes on a Bluetooth keybord. You can get key state with the standard UnityEngine.Input class:
+
+```csharp
+if (UnityEngine.Input.GetKey(KeyCode.A))
+{
+	// Joystick left
+	...
+}
+
+if (Input.GetKey(KeyCode.D))
+{
+	// Joystick right
+	...
+}
+```
+
+
 
 ## Wired version
 Still needs cable for power supply (USB plug A).
