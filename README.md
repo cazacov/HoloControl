@@ -3,7 +3,7 @@ HoloLens input device based on Wii Nunchuk controller.
 - Adds two buttons and joystick functionality
 - Wireless connection over Bluetooth
 - Low latency, reaction time < 1/20 second
-- Easy to use in Unity, no external depenencies
+- Easy to use in Unity, no external dependencies
 
 ## Demo
 
@@ -17,7 +17,7 @@ HoloLens input device based on Wii Nunchuk controller.
 - Arduno translates key press events in HID codes and sends them to EZ-Key board over serial interface.
 - Bluefruit EZ-Key board appears like an external keyboard in the list of available Bluetooth devices on the HoloLens.
 - Standard Bluetooth pairing, no PIN required. If something goes wrong there is Pair button on the EZ-Key board to restart the connection.
-- For Unity scripts the HoloControler looks like normal key press events comming from a keyboard.
+- For Unity scripts the HoloControler looks like normal key press events coming from a keyboard.
 
 
 First prototype
@@ -43,6 +43,7 @@ Wired version
 
 [<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/circuit.png" alt="Circuit diagram" />](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/circuit.png "Circuit diagram")
 
+It can be made completely mobile by adding LiPo accumulator and charge controller, but then you'll need 3D printer to print bigger case.
 
 Arduino stacked on the top of EZ-Key board. I put a piece of plastic between boards for electrical isolation.
 
@@ -71,7 +72,7 @@ Be sure to choose correct board type in the Arduino IDE
 
 ## Using in Unity
 
-The controller simulates keys strokes on a Bluetooth keybord. Jostick directions are translated in A, D, W, S keys. Z button is mapped to Return and C button to Escape. 
+The controller simulates keys strokes on a Bluetooth keyboard. Joystick directions are translated in A, D, W, S keys. Z button is mapped to Return and C button to Escape. 
 
 You can get key state with the standard UnityEngine.Input class:
 
