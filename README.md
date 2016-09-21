@@ -5,6 +5,9 @@ HoloLens input device based on Wii Nunchuk controller.
 - Low latency, reaction time < 1/20 second
 - Easy to use in Unity, no external depenencies
 
+## Demo
+
+[![Alt text](https://img.youtube.com/vi/75GZE48Ib2U/0.jpg)](https://www.youtube.com/watch?v=75GZE48Ib2U)
 
 ## How it works
 
