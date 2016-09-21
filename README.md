@@ -5,16 +5,17 @@ HoloLens input device based on Wii Nunchuk controller.
 - Low latency, reaction time < 1/20 second
 - Easy to use in Unity, no external dependencies
 
-## Demo
+## Demo Video
 
 [![Alt text](https://img.youtube.com/vi/75GZE48Ib2U/0.jpg)](https://www.youtube.com/watch?v=75GZE48Ib2U)
 
 ## How it works
 
-![Hardware overview](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/overview.png)
+[<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/overview.png" alt="Overview" width="860" height="140"/>](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/overview.png "Overview")
+
 
 - Arduino board reads button state from nunchuk over I2C protocol.
-- Arduno translates key press events in HID codes and sends them to EZ-Key board over serial interface.
+- Arduno translates key press events in [USB HID codes](http://www.freebsddiary.org/APC/usb_hid_usages.php) and sends them to EZ-Key board over serial interface.
 - Bluefruit EZ-Key board appears like an external keyboard in the list of available Bluetooth devices on the HoloLens.
 - Standard Bluetooth pairing, no PIN required. If something goes wrong there is Pair button on the EZ-Key board to restart the connection.
 - For Unity scripts the HoloControler looks like normal key press events coming from a keyboard.
@@ -43,7 +44,7 @@ Wired version
 
 [<img src="https://raw.githubusercontent.com/cazacov/HoloControl/master/img/circuit.png" alt="Circuit diagram" />](https://raw.githubusercontent.com/cazacov/HoloControl/master/img/circuit.png "Circuit diagram")
 
-It can be made completely mobile by adding LiPo accumulator and charge controller, but then you'll need 3D printer to print bigger case.
+It's also possible to make it completely mobile by adding LiPo accumulator and charge controller, but then you'll need a 3D printer to print bigger case.
 
 Arduino stacked on the top of EZ-Key board. I put a piece of plastic between boards for electrical isolation.
 
@@ -90,6 +91,7 @@ if (UnityEngine.Input.GetKey(KeyCode.D))
 }
 ```
 
+Demo Unity project is included.
 
 
 ## Wired version
