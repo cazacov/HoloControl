@@ -1,3 +1,5 @@
+![My son testing the new controller](./img/tester.jpg)
+
 # HoloControl
 HoloLens input device based on Wii Nunchuk controller.
 - Adds two buttons and joystick functionality
